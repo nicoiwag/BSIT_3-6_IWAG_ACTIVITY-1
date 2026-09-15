@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Data Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .sheet {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border: 1px solid #ccc;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .sheet-header p {
+            text-align: center;
+            margin-top: 0;
+            color: #666;
+        }
+
+        .field {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .row .field {
+            flex: 1;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sheet">
+
+        <div class="sheet-header">
+            <h1>Bio Data</h1>
+            <p>Personal Information Sheet</p>
+        </div>
+
+        <form action="/Register" method="POST">
+
+            <div class="row">
+                <div class="field">
+                    <label for="fn">First Name</label>
+                    <input type="text" id="fn" name="fn" placeholder="Enter first name" required>
+                </div>
+
+                <div class="field">
+                    <label for="ln">Last Name</label>
+                    <input type="text" id="ln" name="ln" placeholder="Enter last name" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="field">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Age" required>
+                </div>
+
+                <div class="field">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select gender</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="civil_status">Civil Status</label>
+                <select id="civil_status" name="civil_status" required>
+                    <option value="" disabled selected>Select status</option>
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="widowed">Widowed</option>
+                    <option value="separated">Separated</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="nationality">Nationality</label>
+                <input type="text" id="nationality" name="nationality" placeholder="Enter nationality" required>
+            </div>
+
+            <div class="field">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="2" placeholder="Enter complete address" required></textarea>
+            </div>
+
+            <div class="row">
+                <div class="field">
+                    <label for="contact">Contact Number</label>
+                    <input type="tel" id="contact" name="contact" placeholder="Enter phone number" required>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="occupation">Occupation</label>
+                <input type="text" id="occupation" name="occupation" placeholder="Enter occupation">
+            </div>
+
+            <button type="submit">Register</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
