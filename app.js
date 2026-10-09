@@ -48,6 +48,10 @@ app.post('/register', (req, res) => {
         );
     });
 
+    app.get('/view', (req,res) =>{
+        const get 
+    })
+
     console.log(fisrtname, lastname, age, date_of_birth, gender, civil_status, nationality, address, ccontact_number, email_add, occupation);
 });
 
